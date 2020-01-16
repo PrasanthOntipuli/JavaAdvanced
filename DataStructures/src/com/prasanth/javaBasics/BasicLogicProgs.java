@@ -79,6 +79,10 @@ public class BasicLogicProgs {
 		return index;
 	}
 
+	public int[] sort(int[] data)
+	{
+		return null;
+	}
 	public static void main(String[] args) {
 
 		int[] data = { 1, 3, 4, 5, 7, 9 };
