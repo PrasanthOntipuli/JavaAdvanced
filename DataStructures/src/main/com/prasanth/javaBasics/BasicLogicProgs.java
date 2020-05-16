@@ -74,27 +74,69 @@ public class BasicLogicProgs {
 	}
 
 	public static Integer getPossibleIndex(int[] data, int index, int element) {
-		while (data[index] < element && index++ < data.length - 1)
-			;
+		while (data[index] < element && index++ < data.length - 1);
 		return index;
 	}
 
-	public int[] sort(int[] data)
+	public static  int[] insertionSort(int[] data)
 	{
+		for(int i=0;i<data.length;i++)
+		{
+			//int temp=data[i];
+			for(int j=i+1;j<data.length;j++)
+			{
+			  int greater;
+			  if(data[i]>data[j])
+			  {
+				  greater=data[i];
+				  data[i]=data[j];
+				  data[j]=greater;
+			//	showData(data);  
+				
+			  }
+			}
+		}
+		return data;
+	}
+	public static void showData(int[] data)
+	{
+		for(int i=0;i<data.length;i++)
+		{
+		System.out.print(data[i] + " :: ");
+		}	
+		System.out.println("");
+	}
+	public static int[] boubleSort(int[] data)
+	{
+		for(int i=0;i<data.length;i++)
+		{
+			//int temp=data[i];
+			for(int j=i+1;j<data.length;j++)
+			{
+				
+			}
+		}
 		return null;
+			
 	}
 	public static void main(String[] args) {
 
-		int[] data = { 1, 3, 4, 5, 7, 9 };
-		System.out.println(getPossibleIndex(data, 0, 11));
-		for (int i = 2; i < 100; i++) {
-			System.out.println("is " + i + " prime ::" + isPrime(i));
+		int[] data = { 8,45,5,3,1,2,22};
+//		System.out.println(getPossibleIndex(data, 0, 11));
+//		for (int i = 2; i < 100; i++) {
+//			System.out.println("is " + i + " prime ::" + isPrime(i));
+//		}
+//		System.out.println(ispalindrome("Amrutha"));
+//		System.out.println(reverseString("TalkWise"));
+//		System.out.println(reverseANumber(1234));
+//		printFibbnociSeries(123);
+//		System.out.println(reverseWordsinString(strInput));
+//
+		data=insertionSort(data);
+		for(int i=0;i<data.length;i++)
+		{
+		System.out.println(data[i]);
 		}
-		System.out.println(ispalindrome("Amrutha"));
-		System.out.println(reverseString("TalkWise"));
-		System.out.println(reverseANumber(1234));
-		printFibbnociSeries(123);
-		System.out.println(reverseWordsinString(strInput));
 	}
 
 }
